@@ -121,8 +121,8 @@ class Aluno {
 
 
     /* Utilitários */
-    public function formataNota(float $p_nota):string {
-        return "R$ ".number_format( $p_nota, 2, ",", "." );
+    public function formataNota(float $media):string {
+        return number_format( $media, 2, ",", "." );
     }
 
 

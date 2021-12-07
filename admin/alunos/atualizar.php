@@ -94,7 +94,7 @@ if(isset($_POST['atualizar'])){
         <span id="situacao" name="situacao"></span>
         <span id="mensagem" name="mensagem"></span>
             <label class="form-label" for="media">Media:</label>
-	        <input class="form-control" value="<?=$dados['media']?>" type="text" name="media" id="media" >
+	        <input class="form-control" value="<?=$alunos->formataNota($dados['media'])?>" type="number" name="media" id="media" min="0" max="15000" step="0.01">
 
         </p>   
 	    <p class="form-group">
@@ -106,7 +106,7 @@ if(isset($_POST['atualizar'])){
         <button class="btn btn-primary" onclick="return confirm('Tem certeza que deseja atualizar este registro?')" name="atualizar">Atualizar Aluno</button>
 	</form>	   
 
-<pre><?php var_dump($dados['situacao']) ?></pre>
+<pre><?php var_dump($dados['media']) ?></pre>
 
 </div>
 
@@ -114,10 +114,10 @@ if(isset($_POST['atualizar'])){
 <script>
 var campo1 = document.getElementById("p_nota");
 var campo2 = document.getElementById("s_nota");
-
+var media = document.getElementById("media");
 var resultado = document.getElementById("ValorNota");
-let reprovado = document.getElementById("situacao");
-let aprovado = document.getElementById("situacao");
+var reprovado = document.getElementById("situacao");
+var aprovado = document.getElementById("situacao");
 
 
 function trocaCor() {
@@ -161,21 +161,20 @@ var onInput = function (event) {
     document.getElementById('media').value = calc;
   }
 
+  document.getElementById('media').value = media;
 
 }
 
 p_nota.addEventListener("input", somenteNumeros);
 s_nota.addEventListener("input", somenteNumeros);
-
+resultado.addEventListener("input", somenteNumeros);
 resultado.addEventListener("input", onInput);
-
 p_nota.addEventListener("input", onInput);
 s_nota.addEventListener("input", onInput);
 
 onInput();
 
 
-document.getElementById('media').value = media;
 
 
 </script>
