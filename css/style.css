@@ -1,0 +1,23 @@
+html { font-size: 16px;}
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+h2 { 
+    font-size: 1.1rem; 
+    color: #454545;
+}
+
+a { 
+    text-decoration: none;
+    color: blue;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
