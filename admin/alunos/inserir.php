@@ -40,12 +40,9 @@ if(isset($_POST['inserir'])){
 <title>Alunos | UPDATE - CRUD com PHP e MySQL </title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 <link href="../../css/style.css" rel="stylesheet">
-<style>
 
-</style>
 </head>
 <body>
-
 <header class="sticky-top border-bottom border-dark">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
